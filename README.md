@@ -1,4 +1,4 @@
-git clone <url> Download a remote repository from a url
+<pre>git clone <url> Download a remote repository from a url
 git clone https://github.com/SuperSimpleDev/repository1
 git clone <url> <folder_name> Download the repository and give it a different
 folder name
@@ -13,3 +13,5 @@ branch with those new commits
 git pull origin main --set-upstream
 ^
 Sets up a shortcut so that the next time you are on the main branch and r
+</pre>
+
