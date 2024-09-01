@@ -1,5 +1,5 @@
 <pre>git clone <url> Download a remote repository from a url
-git clone https://github.com/SuperSimpleDev/repository1
+git clone https://github.com/Bishuthapa/BIT-4th-sem.git
 git clone <url> <folder_name> Download the repository and give it a different
 folder name
 git fetch Updates all remote tracking branches. Remote
