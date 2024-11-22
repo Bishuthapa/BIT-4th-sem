@@ -1,0 +1,66 @@
+<family>
+	<greatfather>
+        Padam Bhadur Thapa
+    </greatfather>
+	<son>
+		<name>Hasta Bhadur Thapa</name>
+		<sons>
+			<name>1st Thapa</name>
+		</sons>
+		<sons>
+			<name>2nd Thapa</name>
+		</sons>
+		<sons>
+			<name>3rd Thapa</name>
+		</sons>
+		<sons>
+			<name>4th Thapa</name>
+		</sons>
+	</son>
+	<son>
+		<name>Sarba Bhadur Thapa</name>
+		<sons>
+			<name>Bharat Thapa</name>
+			<sonss>
+				<name>Dipak Thapa</name>
+				<sonsss>
+					<name>Dipsan Thapa</name>
+					<name>Pesal Thapa</name>
+				</sonsss>
+			</sonss>
+		</sons>
+	</son>
+	<son>
+		<name>Kamal Bhadur Thapa</name>
+		<sons>
+			<name>Ranjan Thapa</name>
+			<daughter>
+				<name>Rajina Thapa</name>
+			</daughter>
+			<daughter>
+				<name>Shreya Thapa</name>
+			</daughter>
+			<daughter>
+				<name>Babita Thapa</name>
+			</daughter>
+		</sons>
+		<sons>
+			<name>Bipul Thapa</name>
+			<sonss>
+				<name>Appeal Thapa</name>
+			</sonss>
+			<Daughter>
+				<name>Samragyee Thapa</name>
+			</Daughter>
+		</sons>
+		<sons>
+			<name>Binod Thapa</name>
+			<sons>
+				<name>Bishu Thapa</name>
+			</sons>
+			<sons>
+				<name>Bibit Thapa</name>
+			</sons>
+		</sons>
+	</son>
+</family>

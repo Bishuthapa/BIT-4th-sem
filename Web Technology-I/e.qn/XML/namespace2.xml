@@ -1,0 +1,10 @@
+<?xml version ="1.0"?>
+<college>
+<eng.engineering xmlns:eng ="http//:www.xyz.com/url1">
+	<eng:subject>OS</eng:subject>
+</eng.engineering>
+
+<med.medical xmlns:med = "http//:www.abc.com/url2">
+	<med.subject>Biochemistry</med.subject>
+</med.medical>
+</college>

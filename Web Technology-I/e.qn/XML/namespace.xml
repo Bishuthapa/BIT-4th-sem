@@ -1,0 +1,10 @@
+<?xml versio='1.0'>
+<c1.course xmls:c1 = "http://www.abc.com">
+	<c1.name>IIT</c1.name>
+</c1.course>
+
+
+<?xml version="1.0">
+<c2.course xmls:c2 ="http://www.xyz.com">
+	<c2.name>IIT</c2.name>
+</c2.course>
