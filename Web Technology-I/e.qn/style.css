@@ -1,28 +1,19 @@
-/* Normal Box Layout */
-.normal-layout {
-    border: 1px solid blue;
-    padding: 10px;
-  }
-  
-  .normal-layout p {
-    background: lightblue;
-    margin-bottom: 10px;
-  }
-  
-  .normal-layout span {
-    background: yellow;
-  }
-  
-  /* Basic Box Layout */
-  .basic-layout {
-    border: 1px solid green;
-    padding: 10px;
-  }
-  
-  .basic-layout .box {
-    width: 150px;
-    padding: 10px;
-    margin: 10px;
-    border: 1px solid red;
-  }
-  
+#box1{
+    width: 400px;
+    height: 400px;
+    border:1px solid black;
+    margin:60px;
+    position :relative
+}
+    
+
+
+#dai{
+    font-size: 40px;
+    border: 1px solid lightgreen;
+    position: absolute;
+    background-color: lightgreen;
+    padding:0%;
+    top: 0px;
+    right: 0px;
+}

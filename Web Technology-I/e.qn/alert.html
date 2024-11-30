@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+        #result{
+            margin: 40px;
+            padding: 20px;
+            background-color: lightblue;
+            width: 400px;
+            height: 400px;
+            border-radius: 20px;
+            
+            border:2px solid black;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="result">
+    <h1>Form Validation Example</h1>
+    <form id="userForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <span class="error" id="emailError"></span>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <span class="error" id="passwordError"></span>
+        <br><br>
+
+        <label>Hobbies:</label>
+        <br>
+        <input type="checkbox" id="hobby1" name="hobbies" value="Reading"> Reading<br>
+        <input type="checkbox" id="hobby2" name="hobbies" value="Sports"> Sports<br>
+        <input type="checkbox" id="hobby3" name="hobbies" value="Music"> Music<br>
+        <span class="error" id="hobbiesError"></span>
+        <br><br>
+
+        <button type="button" onclick="validateForm()">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            // Get the form fields
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const hobbies = document.querySelectorAll('input[name="hobbies"]:checked');
+
+            // Error messages
+            let emailError = "";
+            let passwordError = "";
+            let hobbiesError = "";
+
+            // Email Validation
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!email) {
+                emailError = "Email is required.";
+            } else if (!emailPattern.test(email)) {
+                emailError = "Enter a valid email address.";
+            }
+
+            // Password Validation
+            if (!password) {
+                passwordError = "Password is required.";
+            } else if (password.length < 6) {
+                passwordError = "Password must be at least 6 characters long.";
+            }
+
+            // Hobbies Validation
+            if (hobbies.length === 0) {
+                hobbiesError = "At least one hobby must be selected.";
+            }
+
+            // Display error messages
+            document.getElementById('emailError').textContent = emailError;
+            document.getElementById('passwordError').textContent = passwordError;
+            document.getElementById('hobbiesError').textContent = hobbiesError;
+
+            // Final validation
+            if (!emailError && !passwordError && !hobbiesError) {
+                alert("Form submitted successfully!");
+            }
+        }
+    </script>
+    </div>
+</body>
+</html>
