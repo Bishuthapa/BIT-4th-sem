@@ -1,0 +1,52 @@
+<!--Lab- 6
+Username and Password validation:
+Condition:
+Username: Allows 5-20 characters, letters, numbers, and underscores
+Password: Requires at least one uppercase letter, one lowercase letter, one digit, one special character, and must be at least 8 characters long.
+Source code:-->
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script>
+        function validateForm() {      
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            // Define validation criteria
+            const usernameRegex = /^[a-zA-Z0-9_]{5,20}$/; // Only alphanumeric characters and underscores, 5-20 characters
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/; // At least 8 characters, one uppercase, one lowercase, one number, one special character
+
+            // Validate username
+            if (!usernameRegex.test(username)) {
+                alert("Username must be 5-20 characters long and contain only letters, numbers, or underscores.");
+                return false;
+            }
+
+            // Validate password
+            if (!passwordRegex.test(password)) {
+                alert("Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character.");
+                return false;
+            }
+
+            // If both validations pass
+            alert("Form is valid!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>Login Form</h2>
+    <form onsubmit="return validateForm()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

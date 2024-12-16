@@ -1,0 +1,66 @@
+<!--Lab – 4
+
+Write an HTML code to create HTML form as below and preform form validation using JavaScript
+The validation should be as; 
+Username: Allows 5-15 characters, letters, numbers, and underscores ;bn
+Password: Requires at least one uppercase letter, one lowercase letter, one digit, one special character, and must be at least 8 characters long.
+Source code:-->
+<!DOCTYPE html>
+<html>
+<head>   
+<title>FormValidation</title>
+    <script>
+        function validateForm() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const country = document.getElementById("country").value;
+            const gender = document.querySelector('input[name="gender"]:checked');
+            // Username validation: 
+            const usernameRegex = /^[a-zA-Z0-9_]{5,15}$/;
+            if (!usernameRegex.test(username)) {
+          alert("Username must be 5-15 characters and contain only letters, numbers, and underscores.");
+                return false;
+            }
+            // Password validation:  
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if (!passwordRegex.test(password)) {
+                alert("Password must have at least one uppercase letter, one lowercase letter, one digit, one special character, and must be at least 8 characters long.");
+                return false;
+            }
+
+            // Country selection validation
+            if (country === "Select") {
+                alert("Please select a country.");
+                return false;
+            }
+            // Gender selection validation
+            if (!gender) {
+                alert("Please select a gender.");
+                return false;
+            }
+            // If all validations pass
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validateForm()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="Select">Select</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="India">India</option>
+        </select><br><br>
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="M"> M
+        <input type="radio" id="female" name="gender" value="F"> F<br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

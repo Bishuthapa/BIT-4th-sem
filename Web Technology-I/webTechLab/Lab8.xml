@@ -1,0 +1,80 @@
+<!--Lab- 8
+Use XML to create a student record database for the student information management.
+	Each student record includes student’s name and address. 
+	The name has two parts: First name and last name. 
+	The address has four parts: Street, City, Email and Phone Number
+The structure of the student record can be presented as:
+Source code:-->
+<?xml version = "1.0"?>
+<!--student1.xml-->
+<students>
+    <student>
+      <name>
+            <firstname> Peter </firstname>
+            <lastname> Baral </lastname>
+</name>
+<address>
+         <street> 101 South Street</street>
+         <city> Brt </city>
+          <email> pb@gmail.com </email>
+           <phone> 253456 </phone>
+</address>
+</student>
+<student>
+       <name>
+            <firstname> Tom </firstname>
+             <lastname> Shrestha </lastname>
+     </name>
+<address>
+       <street> 202 College Road </street>
+         <city> Brt </city>
+        <email> tom@gmail.com</email>
+           <phone> 2213456 </phone>
+</address>
+</student>
+</students>
+
+
+<!-- DTD-->
+<?xml version = "1.0"?>
+<!--students.dtd-a document type definition for the students.xml-->
+<!ELEMENT students (student+)>
+<!ELEMENT student (name,address)>
+<!ELEMENT name (firstname,lastname)>
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT address (street,city,email,phone)>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT Phone(#PCDATA)>
+
+
+<?xml version = "1.0"?>
+<!DOCTYPE students SYSTEM "students.dtd">
+    <student>
+      <name>
+            <firstname> Peter </firstname>
+            <lastname> Baral </lastname>
+</name>
+<address>
+         <street> 101 South Street</street>
+         <city> Brt </city>
+          <email> pb@gmail.com </email>
+           <phone> 253456 </phone>
+</address>
+</student>
+<student>
+       <name>
+            <firstname> Tom </firstname>
+             <lastname> Shrestha </lastname>
+     </name>
+<address>
+       <street> 202 College Road </street>
+         <city> Brt </city>
+        <email> tom@gmail.com</email>
+           <phone> 2213456 </phone>
+</address>
+</student>
+</students>
+		

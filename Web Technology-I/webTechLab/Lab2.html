@@ -1,0 +1,52 @@
+<!--Lab -2
+Write an HTML code to create a form with different fields
+Source code:-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Inquiry Form</title>
+</head>
+
+<body>
+    <font size="6">
+        <center>MMAMC</center>
+    </font>
+    <font size="5">
+        <center>Biratnagar <br>
+            Tel: 9852032004</center>
+    </font>
+    <h2 align="center"><u>Inquiry Form</u></h2>
+    <form method="POST" action="mailto:lbgurung00@gmail.com">
+        <p>
+            Full Name: <input type="text" name="your_name" value="Enter your name here" size="30" maxlength="25">
+        </p>
+        <p>
+            Address: <textarea name="address" cols="30" rows="3"></textarea>
+        </p>
+        <p>
+            Sex: 
+            <input type="radio" name="sex" value="M"> Male &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="sex" value="F"> Female
+        </p>
+        <p>
+            In which stream do you want to join?<br>
+            <input type="checkbox" name="stream" value="BCA"> BCA <br>
+            <input type="checkbox" name="stream" value="BIT"> BIT <br>
+            <input type="checkbox" name="stream" value="BCS_IT"> BCS_IT
+        </p>
+        <p>
+            Qualification:<br>
+            <select name="qualification">
+                <option value="10+2_Science">10+2 Science</option>
+                <option value="Commerce">Commerce</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="Send">
+            <input type="reset" value="Clear">
+        </p>
+    </form>
+</body>
+
+</html>
